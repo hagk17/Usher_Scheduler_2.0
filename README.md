@@ -55,18 +55,18 @@ Output files are stored in the directory named "output."
 
 Feel free to tinker with the source code.  The underlying "rule" is that the ushers with the least availability and the shows with the least available ushers to work them are scheduled first.  Here is some mock-psuedocode:
 
-Read in the usher and show data from a file.  
-    Each show stores how many ushers are needed to staff it.  The shows are stored in a list.
+    Read in the usher and show data from a file.  
+        Each show stores how many ushers are needed to staff it.  The shows are stored in a list.
 
-Each usher stores the shows that they are available to staff in a priority queue.  Shows with the least ushers available to staff them are given a higher priority.  The ushers are stored in a list.
+    Each usher stores the shows that they are available to staff in a priority queue.  Shows with the least ushers available to staff them are given a higher priority.  The ushers are stored in a list.
 
-Loop until no more ushers can be scheduled to a show:
-    Insert all the ushers into a priority queue. Ushers with fewer scheduled shows have a higher priority.  If two ushers have the same number of shows, then the one with the fewer number of available shows has the highest priority.
-        For each usher in the priority queue:
-            Schedule a show for the usher.  Choose the show with the least ushers available to staff it.
+    Loop until no more ushers can be scheduled to a show:
+        Insert all the ushers into a priority queue. Ushers with fewer scheduled shows have a higher priority.  If two ushers have the same number of shows, then the one with the fewer number of available shows has the highest priority.
+            For each usher in the priority queue:
+                Schedule a show for the usher.  Choose the show with the least ushers available to staff it.
 
-Repeat the above loop to schedule the alternates.
+    Repeat the above loop to schedule the alternates.
 
-Output two files:
-    One file details the schedule in relation to shows.
-    The other file details the schedule in relation to ushers.
+    Output two files:
+        One file details the schedule in relation to shows.
+        The other file details the schedule in relation to ushers.
